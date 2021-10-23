@@ -1,0 +1,15 @@
+version: "2"
+services:
+  postgres:
+    image: postgres:13.2-alpine
+    environment:
+      POSTGRES_DB: "django_rest_started"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5424:5432"
+    volumes:
+      - postgres-volume:/data/postgres
+
+volumes:
+  postgres-volume: null
